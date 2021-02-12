@@ -69,7 +69,7 @@ func NewLmstatCollector() (Collector, error) {
 		lmstatFeatureUsedUsers: prometheus.NewDesc(
 			prometheus.BuildFQName(namespace, "feature", "used_users"),
 			"License feature used by user labeled by app, feature name and "+
-				"username of the license.", []string{"app", "name", "user"}, nil,
+				"username of the license.", []string{"app", "name", "user", "machine"}, nil,
 		),
 		lmstatFeatureReservGroups: prometheus.NewDesc(
 			prometheus.BuildFQName(namespace, "feature", "reserved_groups"),
